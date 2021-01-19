@@ -1,0 +1,24 @@
+spring当中是默认单例支持循环
+如何证明循环依赖？怎么关闭循环依赖？
+spring解决循环依赖的细节---源码
+
+spring bean是java对象
+java对象就不一定是spring bean
+
+spring bean的产生过程
+
+BeanDefinition
+
+扩展:
+ 实现 BeanFactoryPostProcessor
+ #循环依赖
+ 1. singletonObjects 单例池 spring容器
+ 2. singletonFactories 工厂
+ 3. earlySingletonObjects 三级缓存
+
+循环引用:单例间的循环引用
+
+1.new
+2.init生命周期初始化方法
+3.注入
+4.注入AOP
